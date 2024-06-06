@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tata AIG Claim</string>
+    <string name="_123456">123456</string>
+    <string name="enter">Enter</string>
+    <string name="prefix_phone_no">"+91 - "</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="_15_28_pm">15:28 PM</string>
+    <string name="fir_reporting_date">FIR Reporting Date</string>
+    <string name="action_login">Login</string>
+    <string name="forgot_mpin">Forgot MPIN</string>
+    <string name="unassigned">Unassigned</string>
+    <string name="assigned">Assigned</string>
+    <string name="completed">Completed</string>
+    <string name="in_progress">In Progress</string>
+    <string name="upload">Upload</string>
+    <string name="slide_to_assign_yourself">Slide to Assign Yourself</string>
+    <string name="_91">+91</string>
+
+    <string-array name="DropDown_Selection">
+        <item>Workshop Employee</item>
+        <item>Internal Surveyor</item>
+        <item>External Surveyor</item>
+
+    </string-array>
+</resources>

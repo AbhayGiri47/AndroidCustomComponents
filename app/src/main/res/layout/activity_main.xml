@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.abhay.tataaigclaim.hint_edittext.ClaimAssuredHintEditText
+            android:id="@+id/etHint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:hint="@string/enter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <!-- Phone Field -->
+
+        <com.abhay.tataaigclaim.phone_edittext.ClaimAssuredPhoneEditText
+            android:id="@+id/layoutPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            app:layout_constraintTop_toBottomOf="@+id/etHint"
+            />
+
+        <com.abhay.tataaigclaim.spinner_edittext.ClaimAssuredSpinnerEditText
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutPhoneNumber"
+            />
+
+        <!-- Date Time Layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDate"
+                style="@style/customEditText"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                app:endIconDrawable="@drawable/calendar"
+                app:endIconMinSize="30dp"
+                app:endIconMode="custom"
+                app:layout_constraintEnd_toStartOf="@+id/tilTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:text="@string/dd_mm_yyyy"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTime"
+                style="@style/customEditText"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5dp"
+                app:endIconDrawable="@drawable/time"
+                app:endIconMode="custom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tilDate"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:text="@string/_15_28_pm"
+                    android:textSize="@dimen/dimen_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.abhay.tataaigclaim.datetime_edittext.ClaimAssuredDateTimeEditText
+                android:id="@+id/etDate"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_48dp"
+                app:isDate="true"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                app:layout_constraintEnd_toStartOf="@+id/etTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <com.abhay.tataaigclaim.datetime_edittext.ClaimAssuredDateTimeEditText
+                android:id="@+id/etTime"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_48dp"
+                android:layout_marginStart="@dimen/dimen_5dp"
+                app:isTime="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etDate"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  Login Button-->
+        <com.abhay.tataaigclaim.ConsumerButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/action_login"
+            app:is_primary="true"
+            app:layout_constraintTop_toBottomOf="@+id/clDateTime" />
+
+        <!--  Forgot Mpin Button -->
+        <com.abhay.tataaigclaim.ConsumerButton
+            android:id="@+id/btnForgotMpin"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/forgot_mpin"
+            app:is_primary="false"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <!--  Switch Button -->
+
+        <com.abhay.tataaigclaim.CustomLabeledSwitch
+            android:id="@+id/btnSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnForgotMpin"
+            />
+
+        <!--  Otp EditText length 6-->
+        <com.abhay.tataaigclaim.otp_edittext.ConsumerOtpEditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_45dp"
+            app:forceKeyboard="false"
+            app:inputType="number"
+            app:splitWidth="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnForgotMpin"
+            app:password="false"
+            app:pinHeight="48dp"
+            app:pinLength="6"
+            app:pinWidth="48dp"
+            />
+
+        <!--  Otp EditText length 4-->
+        <com.abhay.tataaigclaim.otp_edittext.ConsumerOtpEditText
+            android:id="@+id/etOtp4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            app:forceKeyboard="false"
+            app:inputType="number"
+            app:splitWidth="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etOtp"
+            app:password="false"
+            app:pinHeight="48dp"
+            app:pinLength="4"
+            app:pinWidth="48dp"
+            />
+
+        <!--  Straight Bottom Navigation View-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/straightBottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_83dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/straight_bottom_nav_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

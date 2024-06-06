@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_32dp">
+
+            <!--<View
+                android:id="@+id/viewSwipe"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48dp"
+                android:background="@drawable/swipe_shape_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/viewCircle"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginVertical="@dimen/dimen_6dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/shape_rounded"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/viewCircle"
+                app:layout_constraintEnd_toEndOf="@+id/viewCircle"
+                app:layout_constraintStart_toStartOf="@+id/viewCircle"
+                app:layout_constraintTop_toTopOf="@+id/viewCircle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/slide_to_assign_yourself"
+                android:textColor="@color/colorAccent"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/viewCircle"
+                app:layout_constraintStart_toEndOf="@id/viewCircle"
+                app:layout_constraintTop_toTopOf="@id/viewCircle" />-->
+
+            <com.abhay.tataaigclaim.swipe_button.SwipeButton
+                android:id="@+id/btnSlide"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:button_image_enabled="@drawable/ic_arrow_right"
+                app:button_image_disabled="@drawable/ic_arrow_right"
+                app:button_image_height="48dp"
+                app:button_image_width="48dp"
+                app:button_trail_enabled="true"
+                app:inner_text="@string/slide_to_assign_yourself"
+                app:initial_state="disabled"
+                app:has_activate_state="true"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_65dp"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="@dimen/dimen_6dp"
+            app:fabCradleRoundedCornerRadius="@dimen/dimen_10dp"
+            app:fabCradleVerticalOffset="@dimen/dimen_10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:background="@android:color/transparent"
+                app:menu="@menu/curved_bottom_nav_menu" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_add"
+            app:backgroundTint="@color/colorAccent"
+            app:borderWidth="@dimen/dimen_0dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:maxImageSize="@dimen/dimen_32dp"
+            app:tint="@color/white" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

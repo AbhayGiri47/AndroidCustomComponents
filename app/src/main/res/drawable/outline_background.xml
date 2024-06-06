@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="@dimen/outline_stroke_width"
+        android:color="@color/edittext_outlined_focused" />
+    <corners android:radius="@dimen/outline_corner_width" />
+</shape>

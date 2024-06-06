@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/assigned"
+        android:icon="@drawable/icon_unassigned"
+        android:title="@string/assigned"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/inProgress"
+        android:icon="@drawable/icon_assigned"
+        android:title="@string/in_progress"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
+
+    <item
+        android:id="@+id/upload"
+        android:icon="@drawable/icon_upload"
+        android:title="@string/upload"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/completed"
+        android:icon="@drawable/icon_completed"
+        android:title="@string/completed"
+        app:showAsAction="ifRoom" />
+
+</menu>

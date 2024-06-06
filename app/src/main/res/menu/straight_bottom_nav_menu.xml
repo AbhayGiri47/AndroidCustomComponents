@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/unassigned"
+        android:title="@string/unassigned"
+        android:icon="@drawable/icon_unassigned"/>
+    <item
+        android:id="@+id/assigned"
+        android:title="@string/assigned"
+        android:icon="@drawable/icon_assigned"/>
+    <item
+        android:id="@+id/completed"
+        android:title="@string/completed"
+        android:icon="@drawable/icon_completed"/>
+</menu>
