@@ -9,6 +9,7 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import com.abhay.tataaigclaim.R
 import com.google.android.material.textfield.TextInputEditText
@@ -38,7 +39,7 @@ class ClaimAssuredPhoneEditText(context: Context, attrs: AttributeSet) :
                 LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT).apply {
                     setMargins(resources.getDimensionPixelSize(R.dimen.dimen_20dp), 0, 0, 0)
                 }
-            text = "+91 - "
+            text = ContextCompat.getString(context,R.string._91)
             textSize = 14f
             typeface = ResourcesCompat.getFont(context, R.font.poppins_regular)
             gravity = Gravity.CENTER_VERTICAL

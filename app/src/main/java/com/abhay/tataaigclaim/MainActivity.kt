@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.adapters.TextViewBindingAdapter.setText
 import com.abhay.tataaigclaim.databinding.ActivityMainBinding
 import com.abhay.tataaigclaim.otp_edittext.ConsumerOtpEditText
 import com.abhay.tataaigclaim.spinner_edittext.SpinnerDataModel
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        binding.etOtp.apply {
+        /*binding.etOtp.apply {
             setTextSize(14)
             setTextColor(Color.BLACK)
             showCursor(true)
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             setTextSize(14)
             setTextColor(Color.BLACK)
             showCursor(true)
-        }
+        }*/
     }
 
     private fun setupBNV() {
@@ -85,18 +86,23 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupDateTime() {
 
-        binding.etDate.apply {
-            inputType = InputType.TYPE_NULL
-            keyListener = null
-            isFocusable = false
-            setOnClickListener { showDatePicker() }
+        if (binding.etHint.isDate){
+            binding.etHint.dateTimeEditText.apply {
+                inputType = InputType.TYPE_NULL
+                keyListener = null
+                isFocusable = false
+                setOnClickListener { showDatePicker() }
+            }
         }
 
-        binding.etTime.apply {
-            inputType = InputType.TYPE_NULL
-            keyListener = null
-            isFocusable = false
-            setOnClickListener { showTimePicker() }
+        if (binding.etHint.isTime){
+
+            binding.etHint.dateTimeEditText.apply {
+                inputType = InputType.TYPE_NULL
+                keyListener = null
+                isFocusable = false
+                setOnClickListener { showTimePicker() }
+            }
         }
     }
 
@@ -105,7 +111,7 @@ class MainActivity : AppCompatActivity() {
         val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
             calendar.set(Calendar.HOUR_OF_DAY, hour)
             calendar.set(Calendar.MINUTE, minute)
-            binding.etTime.setText(
+            binding.etHint.dateTimeEditText.setText(
                 SimpleDateFormat(
                     "hh:mm a",
                     Locale.getDefault()
@@ -133,7 +139,7 @@ class MainActivity : AppCompatActivity() {
                 // Format the selected date into a string
                 val formattedDate = dateFormat.format(selectedDate.time)
                 // Update the TextView to display the selected date with the "Selected Date: " prefix
-                binding.etDate.setText(formattedDate.toString())
+                binding.etHint.dateTimeEditText.setText(formattedDate.toString())
             },
             calendar.get(Calendar.YEAR),
             calendar.get(Calendar.MONTH),
@@ -151,8 +157,10 @@ class MainActivity : AppCompatActivity() {
             SpinnerDataModel(R.drawable.calendar, "External Surveyor")
         )
 
-        binding.spinner.setSpinnerData(items)
-        val spinnerText = binding.spinner.getSpinnerText()
+        binding.etHint.spinnerEditText.setSpinnerData(items)
+
+//        binding.spinner.setSpinnerData(items)
+        val spinnerText = binding.etHint.spinnerEditText.getSpinnerText()
         Log.d("TAG", "setupDropDown: $spinnerText")
 
     }

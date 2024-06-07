@@ -71,8 +71,8 @@
 
     <declare-styleable name="ClaimAssuredDateTimeEditText">
         <attr name="endIcon" format="reference" />
-        <attr name="isDate" format="boolean" />
-        <attr name="isTime" format="boolean" />
+        <!--<attr name="isDate" format="boolean" />
+        <attr name="isTime" format="boolean" />-->
     </declare-styleable>
 
     <declare-styleable name="CustomSpinnerView">
@@ -84,6 +84,9 @@
         <attr name="isMandatoryLabel" format="boolean" />
         <attr name="showLabel" format="boolean" />
         <attr name="labelText" format="string"/>
+        <attr name="hintText" format="string"/>
+        <attr name="isDate" format="boolean" />
+        <attr name="isTime" format="boolean" />
         <attr name="editTextType" format="enum">
             <enum name="standard" value="0" />
             <enum name="phone" value="1" />

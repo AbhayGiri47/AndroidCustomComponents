@@ -12,22 +12,24 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-       <!-- <com.abhay.tataaigclaim.label_edittext.ClaimAssuredLabelEditText
+        <com.abhay.tataaigclaim.label_edittext.ClaimAssuredLabelEditText
             android:id="@+id/etHint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:showLabel="true"
             app:isMandatoryLabel="true"
             app:labelText="Garage/NT ID"
+            app:isTime="true"
             app:editTextType="standard"
+            app:hintText="@string/enter"
             android:layout_marginHorizontal="@dimen/dimen_32dp"
             android:layout_marginTop="@dimen/dimen_20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />-->
+            />
 
-        <com.abhay.tataaigclaim.hint_edittext.ClaimAssuredHintEditText
+        <!--<com.abhay.tataaigclaim.hint_edittext.ClaimAssuredHintEditText
             android:id="@+id/etHint"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_48dp"
@@ -36,7 +38,7 @@
             android:hint="@string/enter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />-->
 
         <!-- Phone Field -->
 

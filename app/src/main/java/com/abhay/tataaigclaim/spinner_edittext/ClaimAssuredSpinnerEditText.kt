@@ -12,12 +12,12 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import com.abhay.tataaigclaim.R
+import com.abhay.tataaigclaim.Utils.dpToPx
 
 
 class ClaimAssuredSpinnerEditText(context: Context, attrs: AttributeSet) :
     LinearLayout(context, attrs) {
 
-    private var spinnerData = mutableListOf<SpinnerDataModel>()
     private val imageView: ImageView
     private val spinnerAdapter: SpinnerAdapter
     private val spinner: Spinner
@@ -54,7 +54,7 @@ class ClaimAssuredSpinnerEditText(context: Context, attrs: AttributeSet) :
 
                 val params = textView.layoutParams as MarginLayoutParams
                 val marginInDp = 20 // Adjust as needed
-                params.marginStart = marginInDp.dpToPx()
+                params.marginStart = marginInDp.dpToPx(resources)
                 textView.layoutParams = params
 
                 previouslySelectedItem = if (position != previouslySelectedItem) position else -1
@@ -69,15 +69,9 @@ class ClaimAssuredSpinnerEditText(context: Context, attrs: AttributeSet) :
     }
 
     fun setSpinnerData(items: List<SpinnerDataModel>) {
-        spinnerData = items.toMutableList()
         spinnerAdapter.addData(items)
         spinner.adapter = spinnerAdapter
 
-    }
-
-    fun Int.dpToPx(): Int {
-        val density = resources.displayMetrics.density
-        return (this * density).toInt()
     }
 
     fun getSpinnerText(): String {

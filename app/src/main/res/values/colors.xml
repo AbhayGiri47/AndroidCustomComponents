@@ -23,5 +23,7 @@
 
     <color name="hintTextColor">#66465465</color>
     <color name="selectedSpinnerItemBackground">#0F185EC4</color>
+    <color name="labelTextColor">#607083</color>
+    <color name="labelMandatoryTextColor">#FF6262</color>
 
 </resources>
