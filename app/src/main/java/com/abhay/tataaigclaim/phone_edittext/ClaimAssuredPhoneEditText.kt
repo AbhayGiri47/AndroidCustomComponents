@@ -13,7 +13,7 @@ import androidx.core.content.res.ResourcesCompat
 import com.abhay.tataaigclaim.R
 import com.google.android.material.textfield.TextInputEditText
 
-class ClaimAssuredPhoneEditText(context: Context, attrs: AttributeSet?) :
+class ClaimAssuredPhoneEditText(context: Context, attrs: AttributeSet) :
     LinearLayout(context, attrs) {
 
     private var prefixTextView: TextView

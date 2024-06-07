@@ -80,5 +80,17 @@
         <attr name="spinnerEntries" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="ClaimAssuredLabelEditText">
+        <attr name="isMandatoryLabel" format="boolean" />
+        <attr name="showLabel" format="boolean" />
+        <attr name="labelText" format="string"/>
+        <attr name="editTextType" format="enum">
+            <enum name="standard" value="0" />
+            <enum name="phone" value="1" />
+            <enum name="dateTime" value="2" />
+            <enum name="spinner" value="3" />
+        </attr>
+    </declare-styleable>
+
 
 </resources>

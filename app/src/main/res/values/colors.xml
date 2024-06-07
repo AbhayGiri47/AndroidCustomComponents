@@ -22,5 +22,6 @@
     <color name="cobalt_two_20">#331c4199</color>
 
     <color name="hintTextColor">#66465465</color>
+    <color name="selectedSpinnerItemBackground">#0F185EC4</color>
 
 </resources>

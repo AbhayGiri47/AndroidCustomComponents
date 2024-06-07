@@ -17,6 +17,7 @@ import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import com.abhay.tataaigclaim.R
 import java.util.*
 import kotlin.math.max
@@ -34,9 +35,9 @@ class ConsumerOtpEditText @JvmOverloads constructor(
      */
     private var mPinLength = 4
     private val editTextList: MutableList<EditText>? = ArrayList()
-    private var mPinWidth = 50
-    private var mTextSize = 12
-    private var mPinHeight = 50
+    private var mPinWidth = 48
+    private var mTextSize = 14
+    private var mPinHeight = 48
     private var mSplitWidth = 20
     private var mCursorVisible = false
     private var mDelPressed = false
@@ -120,6 +121,7 @@ class ConsumerOtpEditText @JvmOverloads constructor(
         for (i in 0 until mPinLength) {
             editText = EditText(context)
             editText.textSize = mTextSize.toFloat()
+            editText.typeface =  ResourcesCompat.getFont(context, R.font.poppins_regular)
             editTextList.add(i, editText)
             this.addView(editText)
             generateOneEditText(editText, "" + i)
@@ -546,6 +548,7 @@ class ConsumerOtpEditText @JvmOverloads constructor(
         }
     }
 
+    @SuppressLint("SoonBlockedPrivateApi")
     fun setCursorShape(@DrawableRes shape: Int) {
         editTextList?.forEach {
             try {
@@ -558,6 +561,7 @@ class ConsumerOtpEditText @JvmOverloads constructor(
 
     }
 
+    @SuppressLint("SoonBlockedPrivateApi")
     private fun setCursorColor(view: EditText, @ColorInt color: Int) {
         try {
             // Get the cursor resource id

@@ -5,7 +5,7 @@
     android:layout_height="@dimen/dimen_48dp"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatTextView
+   <!-- <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSpinnerText"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="match_parent"
@@ -17,7 +17,7 @@
         android:gravity="center_vertical"
         app:layout_constraintEnd_toStartOf="@+id/ivDropDown"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"/>-->
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivDropDown"
@@ -25,23 +25,16 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/icon_dropdown"
-        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSpinnerText"
+        app:layout_constraintStart_toEndOf="@+id/spinnerDropDown"
         />
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spinnerDropDown"
         android:layout_width="match_parent"
+        android:background="@drawable/outline_background"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSpinnerItems"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
